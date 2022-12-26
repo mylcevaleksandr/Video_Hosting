@@ -1,0 +1,425 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url("../fonts/Nunitoregular.woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito-Bold";
+    src: url("../fonts/Nunitobold.woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Nunito-Extrabold";
+    src: url("../fonts/Nunitoextrabold.woff");
+    font-style: normal;
+    font-weight: 800;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-style: normal;
+    background-color: #EDEEF3;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+}
+
+.layout {
+    display: flex;
+}
+
+.sidebar {
+    flex-shrink: 0;
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar:hover {
+    border: 3px solid #467DF2;
+    box-sizing: border-box;
+}
+
+.logo {
+    margin-top: 25px;
+}
+
+.sidebar-actions {
+    width: 186px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.sidebar-actions svg {
+    fill: #858796;
+    margin-right: 10px;
+}
+
+.sidebar-actions span {
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+}
+
+.sidebar-actions:hover {
+    background: #467DF2;
+}
+
+.sidebar-actions:hover svg,
+.sidebar-actions:hover span {
+    color: white;
+    fill: #FFFFFF;
+}
+
+.feedback {
+    font-size: 0;
+    box-sizing: border-box;
+    padding: 11px;
+    position: fixed;
+    bottom: 17px;
+    left: 17px;
+    width: 216px;
+    border-radius: 5px;
+}
+
+.feedback:hover {
+    border: 1px solid #467DF2;
+}
+
+.feedback svg {
+    float: left;
+    margin-right: 7px;
+}
+
+.feedback span {
+    font-size: 14px;
+    line-height: 19px;
+    color: #4F4E4F;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 15px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #858796;
+}
+
+.text:hover {
+    color: #3D63D2;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.menu-one {
+    margin-right: 60px;
+}
+
+.menu-two {
+    margin-right: 40px;
+}
+
+.menu-three {
+    margin-left: 15px;
+    display: inline-block;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    width: 373px;
+    padding: 10px;
+    font-size: 0;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.search:hover {
+    background: #EFEFF5;
+    border: 1px solid #467DF2;
+    border-radius: 10px;
+}
+
+.search input {
+    border: 0;
+    outline: none;
+}
+
+.search button {
+    border: none;
+    outline: none;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.header-right a:nth-child(2) {
+    margin-right: 40px;
+}
+
+.upload {
+    font-family: inherit;
+    border: none;
+    padding: 10px;
+    width: 83px;
+    background-color: #467DF2;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+
+.upload:hover {
+    background: #2F54A3;
+}
+
+.menu svg {
+    fill: #4F4E4F;
+}
+
+.menu:hover svg {
+    fill: #3D63D2;
+}
+
+
+.main-heading {
+    padding: 10px 40px 0 40px;
+    display: flex;
+}
+
+.main-heading h1 {
+    font-family: "Nunito-Extrabold", sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 48px;
+    color: #4F4E4F;
+}
+
+.tasks {
+    display: none;
+    width: 100px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(102, 102, 102, 0.75);
+    border-radius: 10px;
+    border: 1px solid #3D63D2;
+    position: absolute;
+    z-index: 1;
+}
+
+.tasks a {
+    display: block;
+}
+
+.tasks a:first-child {
+    margin-bottom: 12px;
+}
+
+.popup {
+    position: relative;
+}
+
+.popup:hover .tasks {
+    display: block;
+}
+
+.main-cards {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0;
+    padding: 16px 20px 77px 55px;
+}
+
+.main-card {
+    margin: 16px 20px 16px 20px;
+    text-align: left;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+
+}
+
+.main-card:hover {
+    box-shadow: 0 4px 20px rgba(102, 102, 102, 0.75);
+    border: 3px solid #467DF2;
+    margin: 13px 17px 13px 17px;
+}
+
+.image {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 236px;
+    position: relative;
+}
+
+.image-dark {
+    display: none;
+    opacity: 0.6;
+    background-color: black;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+}
+
+.image:hover .image-dark {
+    display: block;
+}
+
+.card-img1 {
+    background-image: url("../images/card1.png");
+}
+
+.card-img2 {
+    background-image: url("../images/card2.png");
+}
+
+.card-img3 {
+    background-image: url("../images/card3.png");
+}
+
+.card-img4 {
+    background-image: url("../images/card4.png");
+}
+
+.card-img5 {
+    background-image: url("../images/card5.png");
+}
+
+.card-img6 {
+    background-image: url("../images/card6.png");
+}
+
+.card-img7 {
+    background-image: url("../images/card7.png");
+}
+
+.card-img8 {
+    background-image: url("../images/card8.png");
+}
+
+.over-image {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    font-size: 14px;
+    line-height: 14px;
+    z-index: 999;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.moderation {
+    color: #4F4E4F;
+    background: rgba(247, 247, 247, 0.8);
+}
+
+.error {
+    color: #DB0C0C;
+    background: rgba(255, 188, 188, 0.8);
+}
+
+.published {
+    background: #C6E0C3;
+    color: #027900;
+}
+
+.card-info {
+    padding: 20px 26px;
+}
+
+.card-info p {
+    font-family: Nunito-Extrabold, sans-serif;
+    width: 300px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 25px;
+    color: #4F4E4F;
+}
+
+.card-info span {
+    font-size: 15px;
+    line-height: 30px;
+    color: #4F4E4F;
+}
+
+.card-actions {
+    margin-top: 19px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-actions svg {
+    fill: #858796;
+}
+
+.card-actions a:hover svg {
+    fill: #467DF2;
+}
+
+.support {
+    display: block;
+    font-family: "Nunito-Bold", sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: #FFFFFF;
+    background: #467DF2;
+    border-radius: 10px 10px 0 0;
+    transform: rotate(-90deg);
+    padding: 11px 20px 9px 20px;
+    border: 0;
+    position: fixed;
+    top: 400px;
+    right: -75px;
+    cursor: pointer;
+
+}
+
+.support:hover {
+    padding-bottom: 19px;
+    background-color: #2F54A3;
+}
+
+.support span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.support svg {
+    transform: rotate(90deg);
+    margin-right: 10px;
+}
