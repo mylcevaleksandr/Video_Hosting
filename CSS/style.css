@@ -25,7 +25,7 @@
 body {
     font-family: "Nunito", sans-serif;
     font-style: normal;
-    background-color: #EDEEF3;
+    background-color: #E5E5E5;
     font-weight: 400;
 }
 
@@ -44,11 +44,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.sidebar:hover {
-    border: 3px solid #467DF2;
-    box-sizing: border-box;
+    background: #F7F7F7;;
 }
 
 .logo {
@@ -94,10 +90,11 @@ a {
     left: 17px;
     width: 216px;
     border-radius: 5px;
+    background: #F7F7F7;
 }
 
 .feedback:hover {
-    border: 1px solid #467DF2;
+    outline: 1px solid #467DF2;
 }
 
 .feedback svg {
@@ -123,6 +120,19 @@ a {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    background: #F7F7F7;
+}
+
+.header svg {
+    fill: #858796;;
+}
+
+.header-left a:first-child svg {
+    fill: #4F4E4F;
+}
+
+.menu:hover svg {
+    fill: #3D63D2;
 }
 
 .text {
@@ -167,17 +177,23 @@ a {
     font-size: 0;
     display: inline-block;
     margin-right: 40px;
+    background: #EFEFF5;
+    border: 1px solid #E2E2E2;
+    border-radius: 10px;
 }
 
-.search:hover {
+.search input {
     background: #EFEFF5;
-    border: 1px solid #467DF2;
-    border-radius: 10px;
+}
+
+.search input::placeholder {
+    color: #B3B3B3;
 }
 
 .search input {
     border: 0;
     outline: none;
+
 }
 
 .search button {
@@ -205,37 +221,15 @@ a {
     background: #2F54A3;
 }
 
-.menu svg {
-    fill: #4F4E4F;
-}
-
-.menu:hover svg {
-    fill: #3D63D2;
-}
-
-
-.main-heading {
-    padding: 10px 40px 0 40px;
-    display: flex;
-}
-
-.main-heading h1 {
-    font-family: "Nunito-Extrabold", sans-serif;
-    font-weight: 800;
-    font-size: 35px;
-    line-height: 48px;
-    color: #4F4E4F;
-}
-
 .tasks {
     display: none;
     width: 100px;
     padding: 25px;
-    box-shadow: 0 4px 20px rgba(102, 102, 102, 0.75);
+    box-shadow: 0 4px 20px rgba(102, 102, 102, 0.85);
     border-radius: 10px;
-    border: 1px solid #3D63D2;
     position: absolute;
-    z-index: 1;
+    background: #FFFFFF;
+    z-index: 999;
 }
 
 .tasks a {
@@ -254,6 +248,20 @@ a {
     display: block;
 }
 
+.main-heading {
+    padding: 10px 40px 0 40px;
+    display: block;
+}
+
+.main-heading h1 {
+    font-family: "Nunito-Extrabold", sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    line-height: 48px;
+    color: #4F4E4F;
+    display: block;
+}
+
 .main-cards {
     display: flex;
     flex-wrap: wrap;
@@ -262,19 +270,17 @@ a {
 }
 
 .main-card {
+    background: #FFFFFF;
     margin: 16px 20px 16px 20px;
     text-align: left;
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    box-sizing: border-box;
-
+    box-sizing: content-box;
 }
 
 .main-card:hover {
     box-shadow: 0 4px 20px rgba(102, 102, 102, 0.75);
-    border: 3px solid #467DF2;
-    margin: 13px 17px 13px 17px;
 }
 
 .image {
@@ -401,17 +407,16 @@ a {
     background: #467DF2;
     border-radius: 10px 10px 0 0;
     transform: rotate(-90deg);
-    padding: 11px 20px 9px 20px;
+    padding: 11px 20px 19px 20px;
     border: 0;
     position: fixed;
     top: 400px;
-    right: -75px;
+    right: -85px;
     cursor: pointer;
-
 }
 
 .support:hover {
-    padding-bottom: 19px;
+    right: -75px;
     background-color: #2F54A3;
 }
 
