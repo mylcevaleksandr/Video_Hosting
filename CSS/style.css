@@ -121,6 +121,7 @@ a {
     justify-content: space-between;
     align-items: center;
     background: #F7F7F7;
+    flex-wrap: wrap;
 }
 
 .header svg {
@@ -267,6 +268,7 @@ a {
     flex-wrap: wrap;
     font-size: 0;
     padding: 16px 20px 77px 55px;
+    justify-content: center;
 }
 
 .main-card {
@@ -428,4 +430,13 @@ a {
 .support svg {
     transform: rotate(90deg);
     margin-right: 10px;
+}
+
+@media screen  and (max-width: 768px){
+    .sidebar{
+        display: none;
+    }
+    .header-right{
+        flex-wrap: wrap;
+    }
 }
